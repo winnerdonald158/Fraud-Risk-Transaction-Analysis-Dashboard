@@ -1,0 +1,17 @@
+                                      BUSINESS QUESTION
+Which customer age groups are most affected by fraud? 
+
+                                      QUERY
+SELECT
+age,
+COUNT(fraud)fraud_count
+FROM fraud_detection_data
+WHERE fraud = 1
+GROUP BY age
+ORDER BY fraud_count DESC;
+
+                                        Insight:
+Age group 2 recorded the highest fraud cases, showing that customers within this category are more exposed to fraudulent activities.
+
+                                Recommendation:
+The company should increase fraud awareness and transaction verification for customer groups with higher fraud exposure.
