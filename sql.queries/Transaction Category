@@ -1,0 +1,17 @@
+                                                             BUSINESS QUESTION
+	Which transaction categories have the highest fraud cases? 
+
+           QUERY
+SELECT
+category,
+COUNT(fraud)fraud_count
+FROM fraud_detection_data
+WHERE fraud = 1
+GROUP BY category
+ORDER BY fraud_count DESC;
+
+           Insight:
+Most fraudulent transactions are happening in the sports and toys category, showing that this category is more exposed to fraud activities compared to others.
+
+      Recommendation:
+The company should strengthen transaction monitoring and verification processes especially in high-risk categories like sports and toys transactions.
