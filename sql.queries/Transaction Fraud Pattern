@@ -1,0 +1,18 @@
+                                               BUSINESS QUESTION
+What transaction behavior patterns are common in fraudulent transactions? 
+
+                           QUERY
+SELECT
+customer,
+COUNT(*) transaction_count
+FROM fraud_detection_data
+WHERE fraud = 1
+GROUP BY customer
+HAVING COUNT(*) > 15
+ORDER BY transaction_count DESC;
+
+                        Insight:
+Some customers recorded unusually high numbers of fraudulent transactions, showing repeated suspicious transaction behavior.
+
+                     Recommendation:
+The company should monitor accounts with repeated suspicious activities and apply transaction limits or account reviews where necessary
