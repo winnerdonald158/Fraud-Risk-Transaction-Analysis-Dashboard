@@ -1,0 +1,15 @@
+                                 BUSINESS QUESTION
+How much money is lost through fraudulent transactions? 
+
+                                  QUERY
+SELECT
+CASE
+WHEN fraud = 1 THEN 'total revenue lost'
+ELSE 'balance'
+END AS Fraud_category,
+SUM(amount)
+FROM fraud_detection_data
+GROUP BY Fraud_category;
+
+                              Insight:
+The total revenue the company has lost is 3,822,671.17,which is a great lose to the company
