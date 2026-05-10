@@ -1,0 +1,17 @@
+                                                                 BUSINESSS QUESTION
+Which merchants are associated with the highest fraudulent transactions? 
+
+                          QUERY
+SELECT
+merchant,
+COUNT(fraud)fraud_count
+From fraud_detection_data
+WHERE fraud =1
+GROUP BY merchant
+ORDER BY fraud_count DESC;
+
+                         Insight:
+Some merchants recorded significantly higher fraudulent transactions compared to others, showing that fraud activities are more concentrated around specific merch
+
+             Recommnedation:
+The company should closely monitor merchants with high fraud activity and carry out regular security checks on their transactions.
