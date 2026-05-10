@@ -145,5 +145,5 @@ Winner Donald
 
 📧 winnerdonald158@gmail.com
 💻 GitHub
-🔗 LinkedIn
+🔗 LinkedIn www.linkedin.com/in/winner-donald
 📍 Abuja, Nigeria
