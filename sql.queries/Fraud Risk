@@ -1,0 +1,18 @@
+                                  BUSINESS QUESTION
+Do higher transaction amounts increase fraud risk? 
+
+                                 QUERY
+SELECT
+CASE 
+WHEN amount > 3000 THEN 'High transaction'
+ELSE 'Low transaction'
+END AS Transaction_category,
+COUNT(*) Fraud_count
+FROM fraud_detection_data
+GROUP BY Transaction_category;
+
+                                Insight:
+Lower transaction amounts experience more fraud cases, possibly because smaller transactions attract less suspicion and are harder to detect quickly.
+
+                            Recommendation:
+Implement strict verification for low-value transactions such as one time passcode 
