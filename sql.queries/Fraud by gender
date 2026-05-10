@@ -1,0 +1,14 @@
+                                  BUSINESS QUESTION
+Which gender experiences more fraudulent transactions? 
+
+                      QUERY
+SELECT
+gender,
+COUNT(fraud)fraud_count
+FROM fraud_detection_data
+WHERE fraud = 1
+GROUP BY gender
+ORDER BY fraud_count DESC;
+
+                Insight:
+Female customers recorded more fraudulent transactions compared to males in this dataset.
