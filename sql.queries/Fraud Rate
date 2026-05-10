@@ -1,0 +1,15 @@
+                                                   BUSINESS QUESTION
+What percentage of total transactions are fraudulent?
+
+                     QUERY
+SELECT
+ROUND(
+COUNT(CASE WHEN fraud = 1 THEN 1 END) * 100.0 / COUNT(*),
+2) AS fraud_percentage
+FROM fraud_detection_data;
+
+                Insight:
+Fraudulent transactions account for a small percentage of total transactions, but they still represent a major financial and security risk to the company
+
+             Recommendation:
+The company should strengthen fraud monitoring systems and implement real-time alerts to quickly identify suspicious transactions before major losses occur.
